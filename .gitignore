@@ -3,3 +3,7 @@ tools/
 *.zip
 .DS_Store
 Thumbs.db
+
+# Local / release artifacts
+*.zip
+credits-server/.env
