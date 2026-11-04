@@ -527,14 +527,20 @@ class SIG_API_Handler {
 			);
 		}
 
+		$headers = array(
+			'Content-Type' => 'application/json',
+			'Accept'       => 'application/json',
+		);
+		$token = isset( $options['credits_token'] ) ? trim( (string) $options['credits_token'] ) : '';
+		if ( '' !== $token ) {
+			$headers['X-Credits-Token'] = $token;
+		}
+
 		$response = wp_remote_post(
 			$endpoint,
 			array(
-				'headers' => array(
-					'Content-Type' => 'application/json',
-					'Accept'       => 'application/json',
-				),
-				'body'    => wp_json_encode(
+				'headers'   => $headers,
+				'body'      => wp_json_encode(
 					array(
 						'prompt' => $prompt,
 						'model'  => $model,

@@ -135,6 +135,14 @@ class SIG_Settings_Page {
 		);
 
 		add_settings_field(
+			'credits_token',
+			__( 'Credits token', 'sme-insights-generator' ),
+			array( $this, 'credits_token_callback' ),
+			$this->option_name,
+			'sig_api_settings'
+		);
+
+		add_settings_field(
 			'ai_model',
 			__( 'Language Model Selection', 'sme-insights-generator' ),
 			array( $this, 'ai_model_callback' ),
@@ -258,6 +266,7 @@ class SIG_Settings_Page {
 				'anthropic_api_key'        => '',
 				'ai_provider'              => 'byo',
 				'credits_endpoint'         => '',
+				'credits_token'            => '',
 				'content_topic'            => '',
 				'content_keywords'         => '',
 				'ai_model'                 => 'gpt-4o',
@@ -284,6 +293,7 @@ class SIG_Settings_Page {
 			$provider = isset( $input['ai_provider'] ) ? sanitize_key( $input['ai_provider'] ) : 'byo';
 			$sanitized_input['ai_provider']              = ( 'credits' === $provider ) ? 'credits' : 'byo';
 			$sanitized_input['credits_endpoint']         = esc_url_raw( $input['credits_endpoint'] );
+			$sanitized_input['credits_token']            = $this->sanitize_secret_field( $input, $existing_before_keys, 'credits_token', 'clear_credits_token' );
 			$sanitized_input['content_topic']            = sanitize_text_field( $input['content_topic'] );
 			$sanitized_input['content_keywords']         = sanitize_text_field( $input['content_keywords'] );
 			$sanitized_input['ai_model']                 = sanitize_text_field( $input['ai_model'] );
@@ -576,6 +586,14 @@ class SIG_Settings_Page {
 				esc_attr( $value )
 			);
 			echo '<p class="description">' . esc_html__( 'Leave empty. Stripe is not connected. Used only when the provider above is set to credits.', 'sme-insights-generator' ) . '</p>';
+		}
+
+		/**
+		 * Shared secret for the credits endpoint.
+		 */
+		public function credits_token_callback() {
+			$this->render_secret_field( 'credits_token', 'clear_credits_token', '' );
+			echo '<p class="description">' . esc_html__( 'Optional. Sent as X-Credits-Token when credits mode is on. Leave empty for an open test endpoint.', 'sme-insights-generator' ) . '</p>';
 		}
 
 		/**
