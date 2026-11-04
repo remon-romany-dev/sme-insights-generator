@@ -2,15 +2,16 @@
 
 آخر تحديث: 4 نوفمبر 2026
 
-## اتعمل على الجهاز
+## اتعمل
 
-| القناة | الملف / المجلد | الحالة |
-| --- | --- | --- |
-| جيت هاب جديد | `github-product/` | جاهز محلياً. محتاج تسجيل دخول جيت هاب عشان يتدفع |
-| CodeCanyon | `packages/codecanyon/sme-insights-generator-1.1.0.zip` | جاهز. محتاج حساب Envato + ديمو حي للرفع |
-| wordpress.org | `packages/wordpress-org/sme-insights-generator-1.1.0.zip` | جاهز. محتاج حساب wordpress.org للرفع |
-| الاشتراك | `credits-server/` | سيرفر الكريدت جاهز للرفع على Netlify. Stripe لسه مش متصل |
-| ThemeForest | `packages/themeforest/sme-insights-theme-kit.zip` | نسخة الثيم + الإضافة جاهزة. محتاج ديمو حي قبل الرفع |
+| القناة | النتيجة |
+| --- | --- |
+| جيت هاب جديد | https://github.com/remon-romany-dev/sme-insights-generator |
+| إصدار 1.1.0 | https://github.com/remon-romany-dev/sme-insights-generator/releases/tag/v1.1.0 |
+| CodeCanyon | الملف جاهز محلياً. الرفع واقف على حساب Envato + ديمو حي |
+| wordpress.org | الملف جاهز محلياً. الرفع واقف على حساب wordpress.org |
+| الاشتراك | `credits-server/` موجود في الريبو الجديد. محتاج ربط Netlify |
+| ThemeForest | `packages/themeforest/sme-insights-theme-kit.zip` جاهز. محتاج ديمو حي |
 
 ## ما اتلمستش
 
@@ -18,9 +19,9 @@
 - ريبو `sme-insights` القديم
 - مشاريع العيش والدليفري وهالة
 
-## عشان أكمل الرفع من هنا
+## عشان أكمل الرفع للمتاجر
 
-1. افتح https://github.com/login/device وادخل الكود اللي هيتبعت في الشات
-2. ابعتلي تأكيد إن حساب Envato مفتوح، أو سجّل دخول في المتصفح
-3. ابعتلي رابط ديمو حي للإضافة (ووردبريس شغال على استضافة عامة)
-4. ابعتلي تأكيد حساب wordpress.org لو عايز الرفع المجاني كمان
+1. ديمو حي على استضافة عامة
+2. تسجيل دخول Envato في المتصفح
+3. تسجيل دخول wordpress.org لو عايز النسخة المجانية
+4. ربط Netlify لحسابك عشان سيرفر الكريدت
