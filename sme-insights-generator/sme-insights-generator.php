@@ -5,7 +5,7 @@
  * Description: Generate and publish WordPress posts on a schedule with OpenAI, Google Gemini, and Anthropic Claude. Empty topic fields keep the original SME subject lists.
  * Version: 1.1.0
  * Author: REMON ROMANY
- * Author URI: https://prortec.com/remon-romany/
+ * Author URI: https://remonromany.com/
  * License: GPL2
  * Text Domain: sme-insights-generator
  */
