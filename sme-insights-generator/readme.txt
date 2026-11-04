@@ -2,14 +2,14 @@
 
 Contributors: remon-romany
 
-Donate link: https://prortec.com/remon-romany/
+Donate link: https://remonromany.com/
 
 Tags: ai, content, automation, seo, openai
 
 Requires at least: 5.0
 Requires PHP: 7.4
 
-Tested up to: 6.8
+Tested up to: 7.1
 
 Stable tag: 1.1.0
 
