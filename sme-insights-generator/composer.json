@@ -1,0 +1,17 @@
+{
+    "name": "remon-romany/sme-insights-generator",
+    "description": "A professional WordPress plugin to automatically generate and publish high-quality business content via a scheduled cron job.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "REMON ROMANY",
+            "email": "REMON.ROMANY.DEV@gmail.com",
+            "homepage": "https://prortec.com/remon-romany/"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4"
+    }
+}
